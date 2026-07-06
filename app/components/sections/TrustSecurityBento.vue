@@ -33,7 +33,7 @@
             :class="isDark ? 'bg-[rgba(91,33,182,0.16)]' : 'bg-white shadow-[0px_4px_20px_0px_rgba(0,0,0,0.04)]'"
           >
             <img
-              src="/images/security-image.png"
+              src="/images/security-image.webp"
               alt="Person using Kokopay securely"
               class="w-full h-full object-cover rounded-[28px]"
             />

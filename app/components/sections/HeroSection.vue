@@ -92,7 +92,7 @@
         <!-- Social proof -->
         <div class="flex items-center gap-4">
           <img
-            src="/images/avatar-group.png"
+            src="/images/avatar-group.webp"
             alt="500k+ users"
             class="h-10 w-auto"
           />
