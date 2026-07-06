@@ -1,0 +1,87 @@
+/* ── main.css ── */
+
+/* ── Koko Sans — served from /public/fonts/ ── */
+@font-face {
+  font-family: "Koko Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('/fonts/KokoSans-Regular.woff') format('woff'),
+       url('/fonts/Koko Sans-Regular.ttf') format('truetype');
+}
+@font-face {
+  font-family: "Koko Sans";
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url('/fonts/KokoSans-Italic.ttf') format('truetype');
+}
+@font-face {
+  font-family: "Koko Sans";
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url('/fonts/KokoSans-Medium.ttf') format('truetype');
+}
+@font-face {
+  font-family: "Koko Sans";
+  font-style: italic;
+  font-weight: 500;
+  font-display: swap;
+  src: url('/fonts/KokoSans-MediumItalic.ttf') format('truetype');
+}
+@font-face {
+  font-family: "Koko Sans";
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url('/fonts/KokoSans-SemiBold.ttf') format('truetype');
+}
+@font-face {
+  font-family: "Koko Sans";
+  font-style: italic;
+  font-weight: 600;
+  font-display: swap;
+  src: url('/fonts/KokoSans-SemiBoldItalic.ttf') format('truetype');
+}
+@font-face {
+  font-family: "Koko Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url('/fonts/KokoSans-Bold.woff') format('woff'),
+       url('/fonts/KokoSans-Bold.ttf') format('truetype');
+}
+@font-face {
+  font-family: "Koko Sans";
+  font-style: italic;
+  font-weight: 700;
+  font-display: swap;
+  src: url('/fonts/KokoSans-BoldItalic.ttf') format('truetype');
+}
+
+/* ── Light mode tokens ── */
+:root {
+  --background: #FAF7F2;
+  --surface:    #FFFFFF;
+  --foreground: #1A1A1A;
+  --muted-fg:   #525252;
+  --primary:    #5B21B6;
+  --primary-dk: #4C1D95;
+  --accent:     #420093;
+  --tok-border: #CCC3D6;
+  --label-mute: #7B7485;
+}
+
+/* ── Dark mode tokens ── */
+.dark {
+  --background: #0F0A1F;
+  --surface:    #1A1430;
+  --foreground: #F5F3FF;
+  --muted-fg:   #A9A4C2;
+  --primary:    #8B5CF6;
+  --primary-dk: #6D28D9;
+  --accent:     #420093;
+  --tok-border: #2D2640;
+  --label-mute: #A9A4C2;
+}

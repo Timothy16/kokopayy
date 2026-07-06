@@ -1,0 +1,392 @@
+/* ── Koko Sans — Local Font ── */
+@font-face { font-family: "Koko Sans"; font-style: normal; font-weight: 400; font-display: swap; src: url("font/KokoSans-Regular.woff") format("woff"); }
+@font-face { font-family: "Koko Sans"; font-style: italic; font-weight: 400; font-display: swap; src: url("font/KokoSans-Italic.woff") format("woff"); }
+@font-face { font-family: "Koko Sans"; font-style: normal; font-weight: 500; font-display: swap; src: url("font/KokoSans-Medium.woff") format("woff"); }
+@font-face { font-family: "Koko Sans"; font-style: italic; font-weight: 500; font-display: swap; src: url("font/KokoSans-MediumItalic.woff") format("woff"); }
+@font-face { font-family: "Koko Sans"; font-style: normal; font-weight: 600; font-display: swap; src: url("font/KokoSans-SemiBold.woff") format("woff"); }
+@font-face { font-family: "Koko Sans"; font-style: italic; font-weight: 600; font-display: swap; src: url("font/KokoSans-SemiBoldItalic.woff") format("woff"); }
+@font-face { font-family: "Koko Sans"; font-style: normal; font-weight: 700; font-display: swap; src: url("font/KokoSans-Bold.woff") format("woff"); }
+@font-face { font-family: "Koko Sans"; font-style: italic; font-weight: 700; font-display: swap; src: url("font/KokoSans-BoldItalic.woff") format("woff"); }
+
+/* ── Kokopay Design Tokens ── */
+:root {
+  /* Light palette */
+  --lm-primary:   #5B21B6;
+  --lm-dark:      #4C1D95;
+  --lm-tint:      #EDE9FE;
+  --lm-page-bg:   #FAF7F2;
+  --lm-card:      #FFFFFF;
+  --lm-gold:      #CA8A04;
+  --lm-text-1:    #1A1A1A;
+  --lm-text-2:    #525252;
+  --lm-border:    #CCC3D6;
+
+  /* Dark palette */
+  --dm-page-bg:   #0F0A1F;
+  --dm-surface:   #1A1430;
+  --dm-primary:   #8B5CF6;
+  --dm-cta:       #6D28D9;
+  --dm-gold:      #FBBF24;
+  --dm-border:    #2D2640;
+  --dm-text-1:    #F5F3FF;
+  --dm-text-2:    #A9A4C2;
+
+  /* Tokens used across page */
+  --color-primary: var(--lm-primary);
+  --color-accent:  #420093;
+  --color-border:  var(--lm-border);
+
+  /* Radius */
+  --r-card:   14px;
+  --r-btn:    8px;
+  --r-input:  8px;
+
+  /* Spacing */
+  --s-8:   8px;
+  --s-16:  16px;
+  --s-24:  24px;
+  --s-32:  32px;
+  --s-48:  48px;
+  --s-64:  64px;
+}
+
+/* ── Reset ── */
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+/* ── Page ── */
+body {
+  font-family: 'Koko Sans', system-ui, sans-serif;
+  background: var(--lm-page-bg);
+  color: var(--lm-text-1);
+  line-height: 1.6;
+}
+
+.page-wrap {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: var(--s-64) var(--s-64);
+}
+
+/* ── 1. Header ── */
+.ds-header {
+  margin-bottom: var(--s-64);
+}
+
+.ds-title {
+  font-family: 'Koko Sans', system-ui, sans-serif;
+  font-size: 56px;
+  font-weight: 700;
+  letter-spacing: -1.12px;
+  line-height: 1.1;
+  color: var(--color-accent);
+  margin-bottom: var(--s-16);
+}
+
+.ds-subtitle {
+  font-family: 'Koko Sans', system-ui, sans-serif;
+  font-size: 36px;
+  font-weight: 400;
+  letter-spacing: -0.36px;
+  color: #4a4453;
+}
+
+/* ── Section wrapper ── */
+.ds-section {
+  margin-bottom: var(--s-64);
+}
+
+.ds-label {
+  font-family: 'Koko Sans', system-ui, sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+  color: #7b7485;
+  margin-bottom: var(--s-24);
+}
+
+/* ── 2. Swatches (Light Mode) ── */
+.swatch-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--s-24);
+  align-items: flex-start;
+}
+
+.swatch-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--s-8);
+}
+
+.swatch {
+  width: 90px;
+  height: 90px;
+  border-radius: 9999px;
+  border: 1px solid var(--color-border);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+  flex-shrink: 0;
+}
+
+.swatch--sm {
+  width: 60px;
+  height: 60px;
+}
+
+.swatch-name {
+  font-family: 'Koko Sans', system-ui, sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+  text-transform: uppercase;
+  color: var(--lm-text-1);
+}
+
+.swatch-hex {
+  font-family: 'Koko Sans', system-ui, sans-serif;
+  font-size: 10px;
+  color: var(--lm-text-2);
+}
+
+/* ── 3. Dark Mode Preview ── */
+.dark-preview {
+  background: var(--dm-page-bg);
+  border: 1px solid var(--dm-border);
+  border-radius: 12px;
+  padding: var(--s-32) var(--s-32);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--s-32);
+  flex-wrap: wrap;
+}
+
+.dark-row {
+  gap: var(--s-24);
+}
+
+.swatch-item.dark .swatch-name,
+.swatch-item.dark .swatch-hex {
+  color: var(--dm-text-2);
+}
+
+.dark-text-demo {
+  text-align: right;
+  flex-shrink: 0;
+}
+
+.dark-text-primary {
+  font-family: 'Koko Sans', system-ui, sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--dm-text-1);
+  line-height: 1.55;
+}
+
+.dark-text-secondary {
+  font-family: 'Koko Sans', system-ui, sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--dm-text-2);
+}
+
+/* ── 4. Typography ── */
+.type-card {
+  background: var(--lm-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--r-card);
+  padding: var(--s-32);
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.type-row {
+  padding: var(--s-24) 0;
+}
+
+.type-divider {
+  height: 1px;
+  background: var(--color-border);
+  opacity: 0.5;
+}
+
+.type-meta {
+  display: block;
+  font-family: 'Koko Sans', system-ui, sans-serif;
+  font-size: 10px;
+  font-weight: 400;
+  color: var(--color-accent);
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+  margin-bottom: var(--s-8);
+}
+
+.type-hero {
+  font-family: 'Koko Sans', system-ui, sans-serif;
+  font-size: 56px;
+  font-weight: 700;
+  letter-spacing: -1.12px;
+  line-height: 1.14;
+  color: var(--lm-text-1);
+}
+
+.type-section-heading {
+  font-family: 'Koko Sans', system-ui, sans-serif;
+  font-size: 36px;
+  font-weight: 700;
+  letter-spacing: -0.36px;
+  line-height: 1.22;
+  color: var(--lm-text-1);
+}
+
+.type-body {
+  font-family: 'Koko Sans', system-ui, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: #4a4453;
+  line-height: 1.5;
+  max-width: 560px;
+}
+
+.type-label {
+  font-family: 'Koko Sans', system-ui, sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+  color: var(--lm-text-1);
+}
+
+/* ── 5. Spacing & Radius ── */
+.spacing-radius-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--s-32);
+}
+
+.ds-card {
+  background: var(--lm-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--r-card);
+  padding: var(--s-32);
+}
+
+.ds-card-title {
+  display: block;
+  font-family: 'Koko Sans', system-ui, sans-serif;
+  font-size: 10px;
+  font-weight: 400;
+  color: var(--color-accent);
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+  margin-bottom: var(--s-24);
+}
+
+/* Spacing scale */
+.spacing-scale {
+  display: flex;
+  align-items: flex-end;
+  gap: var(--s-8);
+}
+
+.spacing-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+}
+
+.spacing-item span {
+  font-family: 'Koko Sans', system-ui, sans-serif;
+  font-size: 10px;
+  color: var(--lm-text-2);
+}
+
+.spacing-block {
+  background: var(--lm-primary);
+  border-radius: 2px;
+  flex-shrink: 0;
+}
+
+/* Radius examples */
+.radius-examples {
+  display: flex;
+  flex-direction: column;
+  gap: var(--s-16);
+}
+
+.radius-row {
+  display: flex;
+}
+
+.radius-box {
+  width: 100%;
+  padding: var(--s-16) var(--s-24);
+  background: #FCF9F8;
+  border: 1px solid var(--color-border);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 14px;
+}
+
+.radius-box span {
+  font-family: 'Koko Sans', system-ui, sans-serif;
+  font-size: 16px;
+  color: var(--lm-text-1);
+}
+
+.radius-box::after {
+  content: '';
+  width: 8px;
+  height: 8px;
+  border-radius: 9999px;
+  background: var(--color-border);
+  flex-shrink: 0;
+}
+
+.radius-btn {
+  width: 100%;
+  padding: 16px;
+  background: var(--color-accent);
+  color: #fff;
+  border: none;
+  border-radius: var(--r-btn);
+  font-family: 'Koko Sans', system-ui, sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  text-align: center;
+  transition: background 0.2s;
+}
+
+.radius-btn:hover {
+  background: var(--lm-primary);
+}
+
+.radius-input {
+  width: 100%;
+  padding: 17px;
+  background: var(--lm-card);
+  color: #7b7485;
+  border: 1px solid #7b7485;
+  border-radius: var(--r-input);
+  font-family: 'Koko Sans', system-ui, sans-serif;
+  font-size: 16px;
+}
+
+/* ── Responsive ── */
+@media (max-width: 768px) {
+  .page-wrap          { padding: var(--s-32) var(--s-24); }
+  .ds-title           { font-size: 36px; }
+  .ds-subtitle        { font-size: 22px; }
+  .type-hero          { font-size: 36px; }
+  .type-section-heading { font-size: 24px; }
+  .spacing-radius-grid { grid-template-columns: 1fr; }
+  .dark-preview       { flex-direction: column; align-items: flex-start; }
+  .dark-text-demo     { text-align: left; }
+  .swatch             { width: 64px; height: 64px; }
+  .swatch-row         { gap: var(--s-16); }
+}

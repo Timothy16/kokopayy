@@ -1,0 +1,14 @@
+/* Koko Sans — full family web embedding. Put all .woff files in ./fonts/.
+   (Add a .woff2 source before the .woff in each rule once you generate them.) */
+@font-face{font-family:"Koko Sans";font-style:normal;font-weight:400;font-display:swap;src:url("fonts/KokoSans-Regular.woff") format("woff");}
+@font-face{font-family:"Koko Sans";font-style:italic;font-weight:400;font-display:swap;src:url("fonts/KokoSans-Italic.woff") format("woff");}
+@font-face{font-family:"Koko Sans";font-style:normal;font-weight:500;font-display:swap;src:url("fonts/KokoSans-Medium.woff") format("woff");}
+@font-face{font-family:"Koko Sans";font-style:italic;font-weight:500;font-display:swap;src:url("fonts/KokoSans-MediumItalic.woff") format("woff");}
+@font-face{font-family:"Koko Sans";font-style:normal;font-weight:600;font-display:swap;src:url("fonts/KokoSans-SemiBold.woff") format("woff");}
+@font-face{font-family:"Koko Sans";font-style:italic;font-weight:600;font-display:swap;src:url("fonts/KokoSans-SemiBoldItalic.woff") format("woff");}
+@font-face{font-family:"Koko Sans";font-style:normal;font-weight:700;font-display:swap;src:url("fonts/KokoSans-Bold.woff") format("woff");}
+@font-face{font-family:"Koko Sans";font-style:italic;font-weight:700;font-display:swap;src:url("fonts/KokoSans-BoldItalic.woff") format("woff");}
+
+:root{ --font-koko:"Koko Sans", system-ui, sans-serif; }
+body{ font-family:var(--font-koko); }
+/* weights: 400 Regular · 500 Medium · 600 SemiBold · 700 Bold (+ italics) */
