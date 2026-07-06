@@ -107,7 +107,7 @@
       <!-- ── Right: phone mockup image (entire visual, including floating cards, is one downloaded image) ── -->
       <div class="flex items-center justify-center lg:h-[680px] lg:overflow-visible">
         <img
-          src="/images/hero-phone.png"
+          src="/images/hero-phone.webp"
           alt="Kokopay app preview showing balance, transfer, and bill payment screens"
           class="w-[460px] sm:w-[560px] lg:w-[650px] xl:w-[730px] h-auto object-contain transition-all duration-300"
           :class="isDark
