@@ -9,6 +9,7 @@ export default defineNuxtConfig({
     preference: 'light',  // respects OS setting on first visit; remembers user toggle
     fallback: 'light',     // fallback if OS preference cannot be determined
     storage: 'cookie',     // cookie is sent with the request, so SSR renders the correct mode
+    storageKey: 'kokopay-color-mode',
   },
   image: {
     format: ['webp'],

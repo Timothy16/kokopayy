@@ -18,7 +18,7 @@
 
 export default defineNuxtPlugin(() => {
   const colorMode = useColorMode()
-  const cookie = useCookie<string | null>('nuxt-color-mode')
+  const cookie = useCookie<string | null>('kokopay-color-mode')
 
   if (cookie.value === 'dark' || cookie.value === 'light') {
     // @ts-expect-error — `value` is typed readonly; assigning here on the
