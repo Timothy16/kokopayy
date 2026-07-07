@@ -6,7 +6,7 @@ export default defineNuxtConfig({
   modules: ['@nuxtjs/tailwindcss', '@nuxtjs/color-mode', '@nuxt/image'],
   colorMode: {
     classSuffix: '',
-    preference: 'system',  // respects OS setting on first visit; remembers user toggle
+    preference: 'light',  // respects OS setting on first visit; remembers user toggle
     fallback: 'light',     // fallback if OS preference cannot be determined
     storage: 'cookie',     // cookie is sent with the request, so SSR renders the correct mode
   },
