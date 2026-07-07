@@ -49,7 +49,7 @@
           ? 'bg-[rgba(91,33,182,0.18)] shadow-[0px_4px_20px_0px_rgba(0,0,0,0.04)]'
           : 'bg-white shadow-[0px_4px_20px_0px_rgba(0,0,0,0.04)]'"
       >
-        <img
+        <NuxtImg
           src="/images/security-image.png"
           alt="Kokopay security features shown on a phone"
           class="w-full h-full object-cover rounded-[28px]"

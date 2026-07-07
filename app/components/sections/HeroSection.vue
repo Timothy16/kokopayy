@@ -28,7 +28,7 @@
     >
 
       <!-- ── Left: copy ── -->
-      <div class="flex flex-col gap-6">
+      <div v-reveal class="flex flex-col gap-6">
 
         <!-- Tag pill -->
         <div
@@ -91,8 +91,8 @@
 
         <!-- Social proof -->
         <div class="flex items-center gap-4">
-          <img
-            src="/images/avatar-group.webp"
+          <NuxtImg
+            src="/images/avatar-group.png"
             alt="500k+ users"
             class="h-10 w-auto"
           />
@@ -105,11 +105,11 @@
       </div>
 
       <!-- ── Right: phone mockup image (entire visual, including floating cards, is one downloaded image) ── -->
-      <div class="flex items-center justify-center lg:h-[680px] lg:overflow-visible">
-        <img
-          src="/images/hero-phone.webp"
+      <div v-reveal="1" class="flex items-center justify-center lg:h-[680px] lg:overflow-visible">
+        <NuxtImg
+          src="/images/hero-phone.png"
           alt="Kokopay app preview showing balance, transfer, and bill payment screens"
-          class="w-[460px] sm:w-[560px] lg:w-[650px] xl:w-[730px] h-auto object-contain transition-all duration-300"
+          class="w-[460px] sm:w-[560px] lg:w-[650px] xl:w-[730px] h-auto object-contain transition-all duration-300 animate-float"
           :class="isDark
             ? 'drop-shadow-[0_32px_80px_rgba(109,40,217,0.35)]'
             : 'drop-shadow-[0_32px_80px_rgba(91,33,182,0.2)]'"

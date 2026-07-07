@@ -56,7 +56,7 @@
 
       <!-- Right: image -->
       <div class="relative w-full lg:w-[600px] shrink-0">
-        <img
+        <NuxtImg
           src="/images/p2p-image.png"
           alt="Kokopay team member using the app"
           class="w-full h-[300px] sm:h-[350px] lg:h-[400px] object-cover rounded-[32px]"

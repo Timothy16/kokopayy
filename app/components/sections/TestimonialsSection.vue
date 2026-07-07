@@ -10,6 +10,7 @@
 
         <!-- Heading -->
         <h2
+          v-reveal
           class="font-sans font-bold text-[28px] sm:text-[32px] lg:text-[36px] leading-[44px] text-center w-full transition-colors duration-300"
           :class="isDark ? 'text-[#E5E2E3]' : 'text-[#1A1A1A]'"
         >
@@ -19,9 +20,10 @@
         <!-- Cards grid -->
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           <div
-            v-for="testimonial in testimonials"
+            v-for="(testimonial, idx) in testimonials"
             :key="testimonial.name"
-            class="flex flex-col gap-6 rounded-[32px] border p-[33px] transition-colors duration-300"
+            v-reveal="idx"
+            class="flex flex-col gap-6 rounded-[32px] border p-[33px] transition-colors duration-300 hover:-translate-y-1 hover:shadow-lg"
             :class="isDark
               ? 'bg-[rgba(61,61,61,0.2)] border-[rgba(58,54,65,0.72)] backdrop-blur-[10px]'
               : 'bg-white border-[#DDDDDD]'"
@@ -52,7 +54,7 @@
                 v-if="testimonial.avatar"
                 class="w-12 h-12 rounded-full overflow-hidden shrink-0"
               >
-                <img
+                <NuxtImg
                   :src="testimonial.avatar"
                   :alt="testimonial.name"
                   class="w-full h-full object-cover rounded-full"

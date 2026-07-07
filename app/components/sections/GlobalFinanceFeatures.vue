@@ -8,7 +8,7 @@
     <div class="max-w-site mx-auto px-5 sm:px-10 lg:px-20 py-16 lg:py-20">
 
       <!-- Heading -->
-      <div class="text-center max-w-[672px] mx-auto mb-12">
+      <div v-reveal class="text-center max-w-[672px] mx-auto mb-12">
         <h2
           class="font-sans font-bold text-[28px] sm:text-[32px] lg:text-[36px] leading-[1.1] mb-4 transition-colors duration-300"
           :class="isDark ? 'text-[#E5E2E3]' : 'text-foreground'"
@@ -27,9 +27,10 @@
       <!-- Feature cards -->
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 lg:gap-6">
         <div
-          v-for="feature in features"
+          v-for="(feature, idx) in features"
           :key="feature.title"
-          class="flex flex-col items-start gap-4 rounded-[32px] border p-[33px] transition-colors duration-300"
+          v-reveal="idx"
+          class="flex flex-col items-start gap-4 rounded-[32px] border p-[33px] transition-colors duration-300 hover:-translate-y-1 hover:shadow-lg"
           :class="isDark
             ? 'bg-[rgba(0,0,0,0.18)] border-[rgba(58,54,65,0.72)]'
             : 'bg-white border-[#DDDDDD]'"

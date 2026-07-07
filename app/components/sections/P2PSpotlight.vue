@@ -9,7 +9,7 @@
       <div class="flex flex-col lg:flex-row items-center gap-12 lg:gap-12 justify-center">
 
         <!-- ── Left: copy ── -->
-        <div class="flex flex-col gap-6 flex-1 min-w-0">
+        <div v-reveal class="flex flex-col gap-6 flex-1 min-w-0">
 
           <!-- Headline -->
           <h2
@@ -69,10 +69,10 @@
         </div>
 
         <!-- ── Right: image ── -->
-        <div class="relative shrink-0 w-full lg:w-[600px] h-[400px] lg:h-[466px]">
+        <div v-reveal="1" class="relative shrink-0 w-full lg:w-[600px] h-[400px] lg:h-[466px]">
 
           <!-- Image -->
-          <img
+          <NuxtImg
             src="/images/p2p-image.png"
             alt="Person using Kokopay app"
             class="absolute inset-0 w-full h-full object-cover rounded-[32px]"

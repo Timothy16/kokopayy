@@ -20,7 +20,7 @@
       <div class="flex flex-col lg:flex-row items-center justify-between gap-12">
 
         <!-- Left: copy -->
-        <div class="flex flex-col gap-6 flex-1 min-w-0">
+        <div v-reveal class="flex flex-col gap-6 flex-1 min-w-0">
 
           <!-- Headline -->
           <h2 class="font-sans font-bold text-[36px] sm:text-[40px] lg:text-[48px] leading-[56px] tracking-[0.28px]">
@@ -53,8 +53,8 @@
         </div>
 
         <!-- Right: phone image — no fixed height, no overflow clip, full image shown -->
-        <div class="shrink-0 w-full lg:w-[500px] flex items-end justify-center lg:justify-end">
-          <img
+        <div v-reveal="1" class="shrink-0 w-full lg:w-[500px] flex items-end justify-center lg:justify-end">
+          <NuxtImg
             src="/images/cta-phone.png"
             alt="Kokopay app on phone"
             class="w-full lg:w-[580px] h-auto object-contain block"

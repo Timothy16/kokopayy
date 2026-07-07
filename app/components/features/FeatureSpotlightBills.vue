@@ -7,7 +7,7 @@
     <div class="max-w-site mx-auto px-5 sm:px-10 lg:px-20 py-20 flex flex-col lg:flex-row gap-12 items-center">
       <!-- Left: image -->
       <div class="w-full lg:flex-1 order-1">
-        <img
+        <NuxtImg
           src="/images/feature-bills.png"
           alt="Kokopay bill payment"
           class="w-full aspect-[3/2] object-cover rounded-[32px]"

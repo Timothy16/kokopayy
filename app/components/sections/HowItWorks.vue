@@ -12,6 +12,7 @@
 
         <!-- Heading -->
         <h2
+          v-reveal
           class="font-sans font-bold text-[28px] sm:text-[32px] lg:text-[36px] leading-[40px] tracking-[0.28px] text-center w-full transition-colors duration-300"
           :class="isDark ? 'text-[#E5E2E3]' : 'text-[#1A1A1A]'"
         >
@@ -30,8 +31,9 @@
 
           <!-- Step -->
           <div
-            v-for="step in steps"
+            v-for="(step, idx) in steps"
             :key="step.number"
+            v-reveal="idx"
             class="flex flex-col items-center"
           >
             <!-- Number circle -->

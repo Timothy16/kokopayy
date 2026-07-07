@@ -38,7 +38,7 @@
 
       <!-- Phone mockup -->
       <div class="w-full max-w-[640px] pt-4">
-        <img
+        <NuxtImg
           src="/images/features-cta-mockup.png"
           alt="Kokopay app overview"
           class="w-full h-auto"

@@ -9,7 +9,7 @@
       <div class="flex flex-col gap-12">
 
         <!-- Heading block -->
-        <div class="flex flex-col gap-4 items-center">
+        <div v-reveal class="flex flex-col gap-4 items-center">
           <h2
             class="font-sans font-bold text-[28px] sm:text-[32px] lg:text-[36px] leading-[40px] tracking-[0.28px] text-center transition-colors duration-300"
             :class="isDark ? 'text-[#E5E2E3]' : 'text-[#1A1A1A]'"
@@ -29,11 +29,12 @@
 
           <!-- Left: image -->
           <div
+            v-reveal
             class="w-full lg:flex-1 h-[320px] sm:h-[400px] lg:h-[500px] rounded-[32px] overflow-hidden p-2 shrink-0 transition-colors duration-300"
             :class="isDark ? 'bg-[rgba(91,33,182,0.16)]' : 'bg-white shadow-[0px_4px_20px_0px_rgba(0,0,0,0.04)]'"
           >
-            <img
-              src="/images/security-image.webp"
+            <NuxtImg
+              src="/images/security-image.png"
               alt="Person using Kokopay securely"
               class="w-full h-full object-cover rounded-[28px]"
             />
@@ -42,9 +43,10 @@
           <!-- Right: stacked cards -->
           <div class="w-full lg:w-[452px] shrink-0 flex flex-col gap-6">
             <div
-              v-for="card in securityCards"
+              v-for="(card, idx) in securityCards"
               :key="card.title"
-              class="flex flex-col gap-0 rounded-[32px] border p-[33px] transition-colors duration-300"
+              v-reveal="idx"
+              class="flex flex-col gap-0 rounded-[32px] border p-[33px] transition-colors duration-300 hover:-translate-y-1 hover:shadow-lg"
               :class="isDark
                 ? 'bg-[rgba(61,61,61,0.2)] border-[rgba(46,46,46,0.5)]'
                 : 'bg-white border-[#DDDDDD]'"

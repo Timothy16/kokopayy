@@ -48,7 +48,7 @@
 
       <!-- Right: image -->
       <div class="w-full lg:w-[569px] shrink-0">
-        <img
+        <NuxtImg
           src="/images/feature-wallet.png"
           alt="Kokopay multi-currency wallet"
           class="w-full h-[300px] sm:h-[380px] lg:h-[450px] object-cover rounded-[32px]"

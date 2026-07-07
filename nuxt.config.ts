@@ -3,11 +3,16 @@
 export default defineNuxtConfig({
   compatibilityDate: '2025-07-15',
   devtools: { enabled: true },
-  modules: ['@nuxtjs/tailwindcss', '@nuxtjs/color-mode'],
+  modules: ['@nuxtjs/tailwindcss', '@nuxtjs/color-mode', '@nuxt/image'],
   colorMode: {
     classSuffix: '',
-    preference: 'system',  // respects OS setting on first visit; remembers user toggle via localStorage
+    preference: 'system',  // respects OS setting on first visit; remembers user toggle
     fallback: 'light',     // fallback if OS preference cannot be determined
+    storage: 'cookie',     // cookie is sent with the request, so SSR renders the correct mode
+  },
+  image: {
+    format: ['webp'],
+    quality: 80,
   },
   css: ['~/assets/css/main.css'],
   app: {

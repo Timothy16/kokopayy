@@ -10,6 +10,7 @@
 
         <!-- Heading -->
         <h2
+          v-reveal
           class="font-sans font-bold text-[28px] sm:text-[32px] lg:text-[36px] leading-[44px] tracking-[0.28px] text-center w-full transition-colors duration-300"
           :class="isDark ? 'text-[#E5E2E3]' : 'text-[#1A1A1A]'"
         >
@@ -21,6 +22,7 @@
           <div
             v-for="(item, index) in faqs"
             :key="index"
+            v-reveal="index"
             class="rounded-[16px] border overflow-hidden transition-colors duration-300"
             :class="isDark
               ? 'bg-[rgba(0,0,0,0.18)] border-[rgba(58,54,65,0.72)]'

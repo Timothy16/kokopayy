@@ -48,7 +48,7 @@
 
       <!-- Right: image -->
       <div class="w-full lg:w-[530px] shrink-0">
-        <img
+        <NuxtImg
           src="/images/feature-p2p.png"
           alt="Kokopay peer-to-peer transfer"
           class="w-full h-[300px] sm:h-[360px] lg:h-[412px] object-cover rounded-[32px]"

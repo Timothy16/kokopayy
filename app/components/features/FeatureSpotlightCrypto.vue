@@ -7,7 +7,7 @@
     <div class="max-w-site mx-auto px-5 sm:px-10 lg:px-20 py-20 flex flex-col lg:flex-row gap-12 items-start">
       <!-- Left: image -->
       <div class="w-full lg:w-[533px] shrink-0 order-1">
-        <img
+        <NuxtImg
           src="/images/feature-crypto.png"
           alt="Kokopay crypto trading"
           class="w-full h-[300px] sm:h-[350px] lg:h-[400px] object-cover rounded-[32px]"

@@ -10,7 +10,7 @@
     <div class="max-w-[1280px] mx-auto px-5 sm:px-10 lg:px-20 py-20">
 
       <!-- Heading block -->
-      <div class="flex flex-col items-center gap-4 mb-12">
+      <div v-reveal class="flex flex-col items-center gap-4 mb-12">
         <h2
           class="font-sans font-bold text-[28px] sm:text-[32px] lg:text-[36px] leading-[44px] text-center tracking-[0] transition-colors duration-300"
           :class="isDark ? 'text-[#E5E2E3]' : 'text-[#1A1A1A]'"
@@ -29,9 +29,10 @@
       <!-- Cards row -->
       <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-6">
         <div
-          v-for="country in countries"
+          v-for="(country, idx) in countries"
           :key="country.code"
-          class="flex flex-col items-center gap-[4px] rounded-[16px] border p-[25px] transition-colors duration-300"
+          v-reveal="idx"
+          class="flex flex-col items-center gap-[4px] rounded-[16px] border p-[25px] transition-colors duration-300 hover:-translate-y-1 hover:shadow-lg"
           :class="isDark
             ? 'bg-[rgba(23,23,28,0.70)] backdrop-blur-[10px] border-[rgba(149,141,161,0.10)]'
             : 'bg-white border-[#E5E7EB]'"
