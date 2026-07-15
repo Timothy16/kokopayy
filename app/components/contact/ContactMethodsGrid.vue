@@ -53,12 +53,9 @@
           Call us
         </h3>
         <div class="flex flex-col gap-1">
+          
           <p class="font-sans text-base leading-6">
-            <span class="font-bold" :class="isDark ? 'text-[#E5E2E3]' : 'text-[#1A1A1A]'">+234 810 746 2814</span>
-            <span :class="isDark ? 'text-[#CCC3D8]' : 'text-[#525252]'"> (Nigeria)</span>
-          </p>
-          <p class="font-sans text-base leading-6">
-            <span class="font-bold" :class="isDark ? 'text-[#E5E2E3]' : 'text-[#1A1A1A]'">+254 706 587 063</span>
+            <span class="font-bold" :class="isDark ? 'text-[#E5E2E3]' : 'text-[#1A1A1A]'">+254 116 018 888</span>
             <span :class="isDark ? 'text-[#CCC3D8]' : 'text-[#525252]'"> (Kenya)</span>
           </p>
         </div>

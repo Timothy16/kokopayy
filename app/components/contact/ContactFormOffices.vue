@@ -193,6 +193,30 @@
             </p>
           </div>
         </div>
+
+        <!-- Cape Town Office -->
+        <div
+          class="flex items-baseline gap-4 p-[33px] rounded-xl border"
+          :class="isDark
+            ? 'bg-[rgba(0,0,0,0.2)] border-[rgba(229,229,229,0.16)]'
+            : 'bg-white border-[#E5E5E5]'"
+        >
+          <img src="/images/icon-location.svg" alt="" class="w-4 h-5 shrink-0" />
+          <div class="flex flex-col gap-2">
+            <h4
+              class="font-sans font-medium text-2xl leading-8 tracking-[0.28px]"
+              :class="isDark ? 'text-[#E5E2E3]' : 'text-[#1A1A1A]'"
+            >
+              Cape Town Office
+            </h4>
+            <p
+              class="font-sans text-base leading-[26px] tracking-[0.28px]"
+              :class="isDark ? 'text-[#CCC3D8]' : 'text-[#525252]'"
+            >
+              15th Floor, The Onyx, 123 Loop Street, Cape Town City Centre, 8001, Cape Town, Western Cape.
+            </p>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -202,6 +226,16 @@
 const colorMode = useColorMode()
 const isDark = computed(() => colorMode.value === 'dark')
 
+// WhatsApp number in international format, digits only (no + or spaces)
+const WHATSAPP_NUMBER = '254116018888'
+
+const topicLabels = {
+  general: 'General Inquiry',
+  support: 'Account Support',
+  billing: 'Billing',
+  partnership: 'Partnership',
+}
+
 const form = reactive({
   fullName: '',
   email: '',
@@ -210,7 +244,15 @@ const form = reactive({
 })
 
 function handleSubmit() {
-  // TODO: wire up to actual submission endpoint
-  console.log('Contact form submitted:', { ...form })
+  const lines = [
+    `Name: ${form.fullName}`,
+    `Email: ${form.email}`,
+    `Topic: ${topicLabels[form.topic]}`,
+    '',
+    form.message,
+  ]
+
+  const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(lines.join('\n'))}`
+  window.open(url, '_blank', 'noopener')
 }
 </script>
