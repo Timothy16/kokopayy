@@ -26,12 +26,12 @@
 
       <div class="flex flex-wrap gap-6 items-center justify-center pt-2">
         <!-- Apple Store -->
-        <a href="#" class="shrink-0 transition-opacity hover:opacity-80">
+        <a href="https://apps.apple.com/ng/app/kokopay/id6443886739" class="shrink-0 transition-opacity hover:opacity-80">
           <img src="/images/icon-apple.svg" alt="Download on the Apple Store" class="h-14 w-auto" />
         </a>
 
         <!-- Google Play -->
-        <a href="#" class="shrink-0 transition-opacity hover:opacity-80">
+        <a href="https://play.google.com/store/apps/details?id=com.kokosend.kokopay.kokopay" class="shrink-0 transition-opacity hover:opacity-80">
           <img src="/images/icon-google-play.svg" alt="Get it on Google Play" class="h-14 w-auto" />
         </a>
       </div>

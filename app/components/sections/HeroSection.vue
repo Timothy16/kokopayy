@@ -73,14 +73,14 @@
 
         <!-- Store badges -->
         <div class="flex flex-wrap gap-4">
-          <a href="#" class="transition-opacity hover:opacity-80 shrink-0">
+          <a href="https://apps.apple.com/ng/app/kokopay/id6443886739" class="transition-opacity hover:opacity-80 shrink-0">
             <img
               src="/images/icon-apple.svg"
               alt="Download on the App Store"
               class="h-[52px] w-auto"
             />
           </a>
-          <a href="#" class="transition-opacity hover:opacity-80 shrink-0">
+          <a href="https://play.google.com/store/apps/details?id=com.kokosend.kokopay.kokopay" class="transition-opacity hover:opacity-80 shrink-0">
             <img
               src="/images/icon-google-play.svg"
               alt="Get it on Google Play"

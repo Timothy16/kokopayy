@@ -75,7 +75,7 @@
 
         <!-- Download App CTA -->
         <NuxtLink
-          to="/contact"
+          to="/#cta"
           class="hidden lg:flex items-center px-8 py-4 text-white font-sans font-medium text-[16px] leading-4 rounded-xl shadow-[0px_1px_1px_rgba(0,0,0,0.05)] transition-transform hover:scale-[1.03] whitespace-nowrap"
           style="background-image: linear-gradient(164.58deg, rgb(124,58,237) 0%, rgb(91,33,182) 100%)"
         >
@@ -200,7 +200,7 @@
           :class="isDark ? 'border-[rgba(74,68,85,0.4)]' : 'border-[rgba(109,40,217,0.1)]'"
         >
           <NuxtLink
-            to="/contact"
+            to="/#cta"
             class="flex items-center justify-center w-full min-h-[48px] px-5 text-white font-sans font-semibold text-[15px] rounded-xl shadow-[0px_1px_1px_rgba(0,0,0,0.05)] transition-transform hover:scale-[1.02]"
             style="background-image: linear-gradient(164.58deg, rgb(124,58,237) 0%, rgb(91,33,182) 100%)"
             @click="mobileOpen = false"

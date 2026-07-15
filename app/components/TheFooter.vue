@@ -52,12 +52,12 @@
               :class="isDark ? 'text-[#E5E2E3]' : 'text-[#1A1A1A]'"
             >Company</p>
             <ul class="flex flex-col gap-[10px]">
-              <li v-for="link in companyLinks" :key="link">
-                <a
-                  href="#"
+              <li v-for="link in companyLinks" :key="link.label">
+                <NuxtLink
+                  :to="link.to"
                   class="font-sans text-[14px] leading-[20px] transition-colors hover:text-primary"
                   :class="isDark ? 'text-[#CCC3D8]' : 'text-[#736C93]'"
-                >{{ link }}</a>
+                >{{ link.label }}</NuxtLink>
               </li>
             </ul>
           </div>
@@ -69,12 +69,12 @@
               :class="isDark ? 'text-[#E5E2E3]' : 'text-[#1A1A1A]'"
             >Legal</p>
             <ul class="flex flex-col gap-[10px]">
-              <li v-for="link in legalLinks" :key="link">
-                <a
-                  href="#"
+              <li v-for="link in legalLinks" :key="link.label">
+                <NuxtLink
+                  :to="link.to"
                   class="font-sans text-[14px] leading-[20px] transition-colors hover:text-primary"
                   :class="isDark ? 'text-[#CCC3D8]' : 'text-[#736C93]'"
-                >{{ link }}</a>
+                >{{ link.label }}</NuxtLink>
               </li>
             </ul>
           </div>
@@ -86,11 +86,12 @@
               :class="isDark ? 'text-[#E5E2E3]' : 'text-[#1A1A1A]'"
             >Contact</p>
             <ul class="flex flex-col gap-[10px]">
-              <li v-for="item in contactItems" :key="item">
-                <span
-                  class="font-sans text-[14px] leading-[20px] transition-colors duration-300"
+              <li v-for="item in contactItems" :key="item.label">
+                <a
+                  :href="item.href"
+                  class="font-sans text-[14px] leading-[20px] transition-colors hover:text-primary"
                   :class="isDark ? 'text-[#CCC3D8]' : 'text-[#736C93]'"
-                >{{ item }}</span>
+                >{{ item.label }}</a>
               </li>
             </ul>
           </div>
@@ -142,18 +143,34 @@ const colorMode = useColorMode()
 const isDark = computed(() => colorMode.value === 'dark')
 const logoFailed = ref(false)
 
-const companyLinks = ['About Us', 'Careers', 'Press', 'Blog', 'Partners']
-const legalLinks   = ['Privacy Policy', 'Terms of Service', 'Cookie Policy']
-const contactItems = ['support@mykokopay.com', '+234 810 746 2814', '+254 706 587 063']
-const addresses    = [
+const companyLinks = [
+  { label: 'Home',     to: '/'         },
+  { label: 'Features', to: '/features' },
+  { label: 'About',    to: '/about'    },
+  { label: 'Security', to: '/security' },
+  { label: 'FAQ',      to: '/faq'      },
+  { label: 'Contact',  to: '/contact'  },
+]
+
+const legalLinks = [
+  { label: 'Privacy Policy',   to: '/privacy-policy' },
+  { label: 'Terms of Service', to: '/terms'          },
+  { label: 'Cookie Policy',    to: '/cookies'        },
+]
+
+const contactItems = [
+  { label: 'support@mykokopay.com', href: 'mailto:support@mykokopay.com' },
+  { label: '+254 116 018 888',      href: 'tel:+254116018888'            },
+]
+
+const addresses = [
   'Nigeria Office: 4th Floor, Tower C, Churchgate Plaza, Constitution Avenue, Central Business District, 900211, Abuja, FCT.',
   'Kenya Office: Western Heights, 8th Floor, Westlands, Nairobi.',
+  'South Africa Office: 15th Floor, The Onyx, 123 Loop Street, Cape Town City Centre, 8001, Cape Town, Western Cape.',
 ]
 
 const socials = [
-  { label: 'Facebook',  href: '#', icon: '/images/facebook.svg'  },
-  { label: 'Twitter',   href: '#', icon: '/images/twitter.svg'   },
-  { label: 'Instagram', href: '#', icon: '/images/instagram.svg' },
-  { label: 'LinkedIn',  href: '#', icon: '/images/linkdein.svg'  },
+  { label: 'Twitter',   href: 'https://x.com/kokopay_wallet?s=11',                                  icon: '/images/twitter.svg'   },
+  { label: 'Instagram', href: 'https://www.instagram.com/kokopaylimited?igsh=MTIwdno1OHV5bWJncA==', icon: '/images/instagram.svg' },
 ]
 </script>
