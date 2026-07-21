@@ -166,7 +166,7 @@ const contactItems = [
 const addresses = [
   'Nigeria Office: 4th Floor, Tower C, Churchgate Plaza, Constitution Avenue, Central Business District, 900211, Abuja, FCT.',
   'Kenya Office: Western Heights, 8th Floor, Westlands, Nairobi.',
-  'South Africa Office: 15th Floor, The Onyx, 123 Loop Street, Cape Town City Centre, 8001, Cape Town, Western Cape.',
+  'Dock Road Junction, Corner of Stanley & Dock Road, Waterfront, Cape Town, 8001'
 ]
 
 const socials = [

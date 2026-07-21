@@ -213,7 +213,7 @@
               class="font-sans text-base leading-[26px] tracking-[0.28px]"
               :class="isDark ? 'text-[#CCC3D8]' : 'text-[#525252]'"
             >
-              15th Floor, The Onyx, 123 Loop Street, Cape Town City Centre, 8001, Cape Town, Western Cape.
+              Dock Road Junction, Corner of Stanley &amp; Dock Road, Waterfront, Cape Town, 8001.
             </p>
           </div>
         </div>
